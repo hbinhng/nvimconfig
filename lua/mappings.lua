@@ -11,7 +11,7 @@ map("i", "jk", "<ESC>")
 map("i", "<C-G>", cmp.mapping.complete())
 
 map("n", "<leader>tt", function()
-  vim.cmd ":tab term"
+  vim.cmd ":term"
 end, {
   desc = "Quick open terminal in new tab",
   noremap = true,

@@ -10,6 +10,14 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("i", "<C-G>", cmp.mapping.complete())
 
+map("n", "<leader>cp", function()
+  vim.cmd 'let @" = expand("%")'
+end, {
+  desc = "Quick copy current file path to unamed register",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>tt", function()
   vim.cmd ":term"
 end, {

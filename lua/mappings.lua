@@ -34,6 +34,22 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>gca", function()
+  vim.cmd ":!git commit --amend --no-edit"
+end, {
+  desc = "Quick amend commit without editing",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>gp", function()
+  vim.cmd ":!git push"
+end, {
+  desc = "Quick git push",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>tt", function()
   vim.cmd ":term"
 end, {

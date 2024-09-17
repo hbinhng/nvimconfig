@@ -18,6 +18,22 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>gaf", function()
+  vim.cmd ':!git add "%"'
+end, {
+  desc = "Quick add current file to git staging index",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>gad", function()
+  vim.cmd ':!git add "%:h"'
+end, {
+  desc = "Quick add current folder to git staging index",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>tt", function()
   vim.cmd ":term"
 end, {

@@ -34,6 +34,22 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>gcm", function()
+  vim.ui.input({
+    prompt = "Enter commit message: ",
+  }, function(message)
+    if message == nil then
+      return
+    end
+
+    vim.system({ "git", "commit", "-m", message }, { text = true }):wait()
+  end)
+end, {
+  desc = "Quick amend commit without editing",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>gca", function()
   vim.cmd ":!git commit --amend --no-edit"
 end, {

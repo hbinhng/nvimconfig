@@ -1,5 +1,17 @@
 return {
   {
+    "Ramilito/kubectl.nvim",
+    config = function()
+      require("kubectl").setup()
+    end,
+  },
+
+  {
+    "ziglang/zig.vim",
+    ft = "zig",
+  },
+
+  {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     config = function()

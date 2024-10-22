@@ -42,7 +42,7 @@ map("n", "<leader>gcm", function()
       return
     end
 
-    vim.system({ "git", "commit", "-m", message }, { text = true }):wait()
+    vim.system({ "git", "commit", "-m", message, "--allow-empty" }, { text = true }):wait()
   end)
 end, {
   desc = "Quick amend commit without editing",

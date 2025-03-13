@@ -75,3 +75,19 @@ end, {
 })
 
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+
+map("n", "<leader>tb", function()
+  vim.cmd "BookmarksMark"
+end, {
+  desc = "Toggle bookmark",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>bl", function()
+  vim.cmd "BookmarksGoto"
+end, {
+  desc = "List all bookmarks",
+  noremap = true,
+  silent = true,
+})

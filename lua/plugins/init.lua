@@ -153,4 +153,17 @@ return {
       },
     },
   },
+
+  {
+    "LintaoAmons/bookmarks.nvim",
+    dependencies = {
+      { "kkharji/sqlite.lua" },
+      { "nvim-telescope/telescope.nvim" },
+      { "stevearc/dressing.nvim" }, -- optional: better UI
+    },
+    config = function()
+      require("bookmarks").setup {}
+    end,
+    lazy = false,
+  },
 }

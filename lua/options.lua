@@ -7,4 +7,3 @@ o.cursorlineopt = "both" -- to enable cursorline!
 o.mouse = ""
 
 vim.g.nvim_tree_group_empty = 1
-

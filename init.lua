@@ -36,4 +36,6 @@ require "nvchad.autocmds"
 
 vim.schedule(function()
   require "mappings"
+
+  require("nvim-tree.view").View.winopts.relativenumber = true
 end)

@@ -91,3 +91,27 @@ end, {
   noremap = true,
   silent = true,
 })
+
+map("n", "<leader>cla", function()
+  vim.cmd "%bd"
+end, {
+  desc = "Close all buffers",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>clo", function()
+  vim.cmd "%bd|e#"
+end, {
+  desc = "Close all buffers except current",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>clx", function()
+  vim.cmd "bufdo if &buftype == '' | bd | endif"
+end, {
+  desc = "Close all text buffers",
+  noremap = true,
+  silent = true,
+})

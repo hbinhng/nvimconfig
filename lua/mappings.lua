@@ -10,6 +10,14 @@ map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("i", "<C-G>", cmp.mapping.complete())
 
+map("n", "<leader>fg", function()
+  require("telescope").extensions.live_grep_args.live_grep_args()
+end, {
+  desc = "telescope live grep (args)",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>cp", function()
   vim.cmd 'let @" = expand("%")'
 end, {

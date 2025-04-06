@@ -29,7 +29,7 @@ end, {
 map("n", "<leader>gaf", function()
   vim.cmd ':!git add "%"'
 end, {
-  desc = "Quick add current file to git staging index",
+  desc = "Quickly add current file to git staging index",
   noremap = true,
   silent = true,
 })
@@ -37,7 +37,15 @@ end, {
 map("n", "<leader>gad", function()
   vim.cmd ':!git add "%:h"'
 end, {
-  desc = "Quick add current folder to git staging index",
+  desc = "Quickly add current folder to git staging index",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>gaa", function()
+  vim.cmd ":!git add ."
+end, {
+  desc = "Quickly add all contents under current workspace to git staging index",
   noremap = true,
   silent = true,
 })

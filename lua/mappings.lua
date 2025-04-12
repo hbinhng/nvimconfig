@@ -18,6 +18,16 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>fi", function()
+  require("telescope.builtin").find_files {
+    cwd = vim.fn.expand "%:h",
+  }
+end, {
+  desc = "telescope browse files in current directory",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>cp", function()
   vim.cmd 'let @" = expand("%")'
 end, {

@@ -92,6 +92,23 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>sft", function()
+  vim.ui.input({
+    prompt = "Enter filetype: ",
+  }, function(ft)
+    if ft == nil then
+      return
+    end
+
+    vim.cmd("set filetype=" .. ft)
+    vim.cmd "syntax on"
+  end)
+end, {
+  desc = "Quickly set filetype for current buffer",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>tt", function()
   vim.cmd ":term"
 end, {

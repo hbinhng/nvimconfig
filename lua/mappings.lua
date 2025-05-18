@@ -13,7 +13,7 @@ map("i", "<C-G>", cmp.mapping.complete())
 map("n", "<leader>fg", function()
   require("telescope").extensions.live_grep_args.live_grep_args()
 end, {
-  desc = "telescope live grep (args)",
+  desc = "Telescope live grep (args)",
   noremap = true,
   silent = true,
 })
@@ -23,7 +23,7 @@ map("n", "<leader>fi", function()
     cwd = vim.fn.expand "%:h",
   }
 end, {
-  desc = "telescope browse files in current directory",
+  desc = "Telescope browse files in current directory",
   noremap = true,
   silent = true,
 })

@@ -26,7 +26,7 @@ local options = {
     },
     csharpier = {
       command = "csharpier",
-      args = { "format", "--write-stdout", "$FILENAME" },
+      args = { "format", "--write-stdout" },
     },
   },
   format_on_save = {

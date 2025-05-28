@@ -25,15 +25,14 @@ return {
   },
 
   {
-    "nvimtools/none-ls.nvim",
-  },
-
-  {
     "MunifTanjim/prettier.nvim",
     config = function()
       require "configs.prettierd"
     end,
   },
+
+  { "Hoffs/omnisharp-extended-lsp.nvim", lazy = true },
+
   -- These are some examples, uncomment them if you want to see them work!
   {
     "neovim/nvim-lspconfig",
@@ -103,6 +102,7 @@ return {
         "css",
         "c",
         "cpp",
+        "c_sharp",
         "typescript",
         "javascript",
         "tsx",

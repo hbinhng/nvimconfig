@@ -11,6 +11,7 @@ local options = {
     css = { prettier },
     html = { prettier },
     json = { prettier },
+    cs = { "csharpier" },
   },
   formatters = {
     php = {
@@ -22,6 +23,10 @@ local options = {
       inherit = false,
       command = "zig",
       args = { "fmt", "$FILENAME" },
+    },
+    csharpier = {
+      command = "csharpier",
+      args = { "format", "--write-stdout", "$FILENAME" },
     },
   },
   format_on_save = {

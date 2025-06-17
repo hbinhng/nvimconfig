@@ -12,6 +12,7 @@ local options = {
     html = { prettier },
     json = { prettier },
     cs = { "csharpier" },
+    go = { "gofmt" },
   },
   formatters = {
     php = {
@@ -27,6 +28,10 @@ local options = {
     csharpier = {
       command = "csharpier",
       args = { "format", "--write-stdout" },
+    },
+    gofmt = {
+      command = "gofmt",
+      args = { "-w", "$FILENAME" },
     },
   },
   format_on_save = {

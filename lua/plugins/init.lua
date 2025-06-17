@@ -51,6 +51,7 @@ return {
         "html-lsp",
         "css-lsp",
         "eslint-lsp",
+        "gopls",
         "prettierd",
       },
     },

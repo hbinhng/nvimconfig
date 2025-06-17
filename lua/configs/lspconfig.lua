@@ -5,8 +5,19 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 local conform = require "conform"
 
-local servers =
-  { "html", "cssls", "tsserver", "phpactor", "tailwindcss", "clangd", "jdtls", "prismals", "jsonls", "csharp_ls" }
+local servers = {
+  "html",
+  "cssls",
+  "tsserver",
+  "phpactor",
+  "tailwindcss",
+  "clangd",
+  "jdtls",
+  "prismals",
+  "jsonls",
+  "csharp_ls",
+  "gopls",
+}
 
 local enhanced_on_attach = function(client, bufnr)
   on_attach(client, bufnr)

@@ -17,6 +17,7 @@ local servers = {
   "jsonls",
   "csharp_ls",
   "gopls",
+  "protols",
 }
 
 local enhanced_on_attach = function(client, bufnr)

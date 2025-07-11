@@ -53,6 +53,8 @@ return {
         "eslint-lsp",
         "gopls",
         "prettierd",
+        "protols",
+        "buf",
       },
     },
   },

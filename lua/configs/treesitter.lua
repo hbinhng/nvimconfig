@@ -31,6 +31,7 @@ ts.setup {
     "typescript",
     "styled",
     "diff",
+    "proto",
   },
   autotag = {
     enable = true,

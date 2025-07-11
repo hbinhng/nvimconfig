@@ -13,6 +13,7 @@ local options = {
     json = { prettier },
     cs = { "csharpier" },
     go = { "gofmt" },
+    proto = { "buf" },
   },
   formatters = {
     php = {
@@ -32,6 +33,10 @@ local options = {
     gofmt = {
       command = "gofmt",
       args = { "-w", "$FILENAME" },
+    },
+    buf = {
+      command = "buf",
+      args = { "format", "-w", "$FILENAME" },
     },
   },
   format_on_save = {

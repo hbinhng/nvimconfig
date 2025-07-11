@@ -6,11 +6,11 @@ end
 ts.setup {
   highlight = {
     enable = true,
-    disable = {},
+    disable = { "text" },
   },
   indent = {
     enable = true,
-    disable = {},
+    disable = { "text" },
   },
   ensure_installed = {
     "tsx",

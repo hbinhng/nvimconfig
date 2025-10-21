@@ -60,6 +60,14 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>grs", function()
+  vim.cmd ":!git restore --staged ."
+end, {
+  desc = "Git restore all staged files",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>gcm", function()
   vim.ui.input({
     prompt = "Enter commit message: ",
@@ -155,6 +163,14 @@ map("n", "<leader>clx", function()
   vim.cmd "bufdo if &buftype == '' | bd | endif"
 end, {
   desc = "Close all text buffers",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>U", function()
+  require("telescope.builtin").lsp_references()
+end, {
+  desc = "LSP Show usages",
   noremap = true,
   silent = true,
 })

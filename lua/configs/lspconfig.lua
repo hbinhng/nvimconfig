@@ -18,6 +18,7 @@ local servers = {
   "csharp_ls",
   "gopls",
   "protols",
+  "yamlls",
 }
 
 local enhanced_on_attach = function(client, bufnr)

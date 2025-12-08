@@ -2,13 +2,12 @@ local on_attach = require("nvchad.configs.lspconfig").on_attach
 local on_init = require("nvchad.configs.lspconfig").on_init
 local capabilities = require("nvchad.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
 local conform = require "conform"
 
 local servers = {
   "html",
   "cssls",
-  "tsserver",
+  "ts_ls",
   "phpactor",
   "tailwindcss",
   "clangd",
@@ -37,18 +36,20 @@ end
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+  vim.lsp.config(lsp, {
     on_attach = enhanced_on_attach,
     on_init = on_init,
     capabilities = capabilities,
-  }
+  })
+
+  vim.lsp.enable(lsp)
 end
 
-lspconfig.zls.setup {
+vim.lsp.config("zls", {
   on_attach = enhanced_on_attach,
   on_init = on_init,
   capabilities = capabilities,
   cmd = { "zls" },
   filetypes = { "zig", "zon" },
-  root_dir = lspconfig.util.root_pattern("zls.json", "build.zig", ".git"),
-}
+  root_markers = { "zls.json", "build.zig", ".git" },
+})

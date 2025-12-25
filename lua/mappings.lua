@@ -2,6 +2,8 @@ require "nvchad.mappings"
 
 -- add yours here
 
+require "lazygit"
+
 local cmp = require "cmp"
 
 local map = vim.keymap.set

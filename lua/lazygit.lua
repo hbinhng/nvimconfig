@@ -1,8 +1,12 @@
 -- Floating LazyGit terminal
 local function open_lazygit_float()
+  if vim.g._lazygit_open then
+    return
+  end
+  vim.g._lazygit_open = true
   -- Create scratch buffer
   local buf = vim.api.nvim_create_buf(false, true)
-  vim.api.nvim_buf_set_option(buf, "bufhidden", "wipe")
+  vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = buf })
 
   -- Floating window size (80% of editor)
   local width = math.floor(vim.o.columns * 0.8)
@@ -25,6 +29,7 @@ local function open_lazygit_float()
   -- Start lazygit in terminal
   vim.fn.termopen("lazygit", {
     on_exit = function()
+      vim.g._lazygit_open = false
       -- Close window safely on exit
       if vim.api.nvim_win_is_valid(win) then
         vim.api.nvim_win_close(win, true)

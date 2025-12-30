@@ -1,4 +1,5 @@
 require "nvchad.options"
+require "performance"
 
 -- add yours here!
 

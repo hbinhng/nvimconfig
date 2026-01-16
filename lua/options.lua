@@ -9,3 +9,7 @@ o.mouse = ""
 
 vim.g.nvim_tree_group_empty = 1
 vim.o.number = true
+
+vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.breakat = " \t!@*?.,;:"

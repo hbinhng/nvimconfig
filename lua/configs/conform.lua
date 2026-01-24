@@ -1,4 +1,4 @@
-local prettier = "prettierd"
+local prettier = "prettier"
 
 local options = {
   formatters_by_ft = {

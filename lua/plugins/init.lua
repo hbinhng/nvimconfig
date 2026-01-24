@@ -1,5 +1,25 @@
 return {
   {
+    "nvim-telescope/telescope.nvim",
+    opts = function(_, opts)
+      local actions = require "telescope.actions"
+
+      opts.pickers = opts.pickers or {}
+      opts.pickers.buffers = opts.pickers.buffers or {}
+      opts.pickers.buffers.mappings = {
+        i = {
+          ["<C-d>"] = actions.delete_buffer,
+        },
+        n = {
+          ["dd"] = actions.delete_buffer,
+        },
+      }
+
+      return opts
+    end,
+  },
+
+  {
     "nvim-telescope/telescope-live-grep-args.nvim",
     dependencies = { "nvim-telescope/telescope.nvim" },
   },

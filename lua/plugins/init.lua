@@ -1,5 +1,13 @@
 return {
   {
+    "f-person/git-blame.nvim",
+    event = "BufReadPre",
+    opts = {
+      enabled = false, -- so <leader>gb toggles it
+    },
+  },
+
+  {
     "nvim-telescope/telescope.nvim",
     opts = function(_, opts)
       local actions = require "telescope.actions"

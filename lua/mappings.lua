@@ -94,6 +94,22 @@ end, {
   silent = true,
 })
 
+map("n", "<leader>gsb", function()
+  vim.cmd ":GitBlameEnable"
+end, {
+  desc = "Git show blame",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>ghb", function()
+  vim.cmd ":GitBlameDisable"
+end, {
+  desc = "Git hide blame",
+  noremap = true,
+  silent = true,
+})
+
 map("n", "<leader>gp", function()
   vim.cmd ":!git push"
 end, {

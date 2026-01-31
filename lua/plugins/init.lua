@@ -1,10 +1,19 @@
 return {
   {
     "f-person/git-blame.nvim",
+    lazy = false,
     event = "BufReadPre",
     opts = {
       enabled = false, -- so <leader>gb toggles it
     },
+  },
+
+  {
+    "DamianVCechov/hexview.nvim",
+    lazy = false,
+    config = function()
+      require("hexview").setup()
+    end,
   },
 
   {
@@ -43,6 +52,7 @@ return {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
     opts = {},
+    ft = { "markdown" },
   },
 
   {

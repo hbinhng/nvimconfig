@@ -42,13 +42,6 @@ return {
   },
 
   {
-    "Ramilito/kubectl.nvim",
-    config = function()
-      require("kubectl").setup()
-    end,
-  },
-
-  {
     "MeanderingProgrammer/render-markdown.nvim",
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
     opts = {},

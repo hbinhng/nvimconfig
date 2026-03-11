@@ -3,6 +3,7 @@ require "nvchad.mappings"
 -- add yours here
 
 require "lazygit"
+require "k9s"
 
 local cmp = require "cmp"
 

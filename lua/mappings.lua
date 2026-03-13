@@ -4,6 +4,7 @@ require "nvchad.mappings"
 
 require "lazygit"
 require "k9s"
+require "git-checkout"
 
 local cmp = require "cmp"
 
@@ -115,6 +116,14 @@ map("n", "<leader>gp", function()
   vim.cmd ":!git push"
 end, {
   desc = "Quick git push",
+  noremap = true,
+  silent = true,
+})
+
+map("n", "<leader>gP", function()
+  vim.cmd ":!git pull"
+end, {
+  desc = "Quick git pull",
   noremap = true,
   silent = true,
 })

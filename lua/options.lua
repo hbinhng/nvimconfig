@@ -13,6 +13,8 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakat = " \t!@*?.,;:"
 
+vim.o.winblend = 25
+
 require("nvim-tree").setup {
   sort = { sorter = "case_sensitive" },
   update_focused_file = {

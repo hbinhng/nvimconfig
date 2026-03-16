@@ -15,6 +15,9 @@ vim.opt.breakat = " \t!@*?.,;:"
 
 require("nvim-tree").setup {
   sort = { sorter = "case_sensitive" },
+  update_focused_file = {
+    enable = true,
+  },
   renderer = {
     group_empty = true,
   },
